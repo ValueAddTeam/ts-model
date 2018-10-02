@@ -71,6 +71,18 @@
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class"><a href="classes/model.html" class="tsd-kind-icon">Model</a></li>
+								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/testclass.html" class="tsd-kind-icon">Test<wbr>Class</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#classfields" class="tsd-kind-icon">Class<wbr>Fields</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#classfieldskeys" class="tsd-kind-icon">Class<wbr>Fields<wbr>Keys</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#classmethods" class="tsd-kind-icon">Class<wbr>Methods</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#classmethodskeys" class="tsd-kind-icon">Class<wbr>Methods<wbr>Keys</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#modelsubset" class="tsd-kind-icon">Model<wbr>Subset</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#omit" class="tsd-kind-icon">Omit</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -90,15 +102,96 @@
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="classfields" class="tsd-anchor"></a>
+					<h3>Class<wbr>Fields</h3>
+					<div class="tsd-signature tsd-kind-icon">Class<wbr>Fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="globals.html#classfieldskeys" class="tsd-signature-type">ClassFieldsKeys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/types.ts#L5">lib/types.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="classfieldskeys" class="tsd-anchor"></a>
+					<h3>Class<wbr>Fields<wbr>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">Class<wbr>Fields<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">{ [P in keyof T]: T[P] extends Function ? never : P; }[keyof T]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/types.ts#L2">lib/types.ts:2</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="classmethods" class="tsd-anchor"></a>
+					<h3>Class<wbr>Methods</h3>
+					<div class="tsd-signature tsd-kind-icon">Class<wbr>Methods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="globals.html#classmethodskeys" class="tsd-signature-type">ClassMethodsKeys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/types.ts#L9">lib/types.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="classmethodskeys" class="tsd-anchor"></a>
+					<h3>Class<wbr>Methods<wbr>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">Class<wbr>Methods<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">{ [P in keyof T]: T[P] extends Function ? P : never; }[keyof T]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/types.ts#L6">lib/types.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="modelsubset" class="tsd-anchor"></a>
+					<h3>Model<wbr>Subset</h3>
+					<div class="tsd-signature tsd-kind-icon">Model<wbr>Subset<span class="tsd-signature-symbol">:</span> <a href="globals.html#omit" class="tsd-signature-type">Omit</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#classfieldskeys" class="tsd-signature-type">ClassFieldsKeys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/model.ts#L24">lib/model.ts:24</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Pick properties from model.
+							Useful if server returns model without some properties.</p>
+						</div>
+						<p>Eg.:
+							<code>
+  class TestClass extends Model {
+    @ModelProp(Date)
+    date: Date;
+    @ModelProp()
+    name: string;
+    @ModelProp()
+    surname: string;
+  }</p>
+<p>  type TestClassWithFullName = ModelSubset&lt;TestClass, &#39;name&#39; | &#39;surname&#39;&gt;;
+</code></p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="omit" class="tsd-anchor"></a>
+					<h3>Omit</h3>
+					<div class="tsd-signature tsd-kind-icon">Omit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/types.ts#L10">lib/types.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="propertydecoratorkey" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> property<wbr>Decorator<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">property<wbr>Decorator<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"__TsModelProp__"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;__TsModelProp__&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Decorator<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"__VaTsModelProp__"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;__VaTsModelProp__&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/ac40a7a/src/lib/model.ts#L3">lib/model.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/model.ts#L4">lib/model.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -115,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/ac40a7a/src/lib/model.ts#L54">lib/model.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/model.ts#L78">lib/model.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -146,7 +239,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/ac40a7a/src/lib/model.ts#L22">lib/model.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/model.ts#L46">lib/model.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -169,7 +262,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/ac40a7a/src/lib/model.ts#L5">lib/model.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/cadc1d3/src/lib/model.ts#L29">lib/model.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -196,6 +289,27 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
 						<a href="classes/model.html" class="tsd-kind-icon">Model</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/testclass.html" class="tsd-kind-icon">Test<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#classfields" class="tsd-kind-icon">Class<wbr>Fields</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#classfieldskeys" class="tsd-kind-icon">Class<wbr>Fields<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#classmethods" class="tsd-kind-icon">Class<wbr>Methods</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#classmethodskeys" class="tsd-kind-icon">Class<wbr>Methods<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#modelsubset" class="tsd-kind-icon">Model<wbr>Subset</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#omit" class="tsd-kind-icon">Omit</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#propertydecoratorkey" class="tsd-kind-icon">property<wbr>Decorator<wbr>Key</a>
