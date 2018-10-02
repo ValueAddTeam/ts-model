@@ -1,7 +1,10 @@
 {
   "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable"],
   "rules": {
+    "member-access": false,
     "interface-name": [true, "never-prefix"],
+    "no-angle-bracket-type-assertion": false,
+    "no-console": false,
     // TODO: allow devDependencies only in **/*.spec.ts files:
     // waiting on https://github.com/palantir/tslint/pull/3708
     "no-implicit-dependencies": [true, "dev"]
