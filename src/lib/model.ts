@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import { ClassFields, ClassFieldsKeys, Omit } from './types';
+import { isArray, isPrimitive } from './utils';
 
 const propertyDecoratorKey = '__VaTsModelProp__';
 
@@ -26,33 +27,6 @@ export type ModelSubset<T extends Model, K extends keyof T> = Omit<
   Exclude<ClassFieldsKeys<T>, K>
 >;
 
-export function isPrimitive(value: any): boolean {
-  switch (typeof value) {
-    case 'string':
-    case 'number':
-    case 'boolean':
-      return true;
-  }
-  return (
-    value instanceof String ||
-    value === String ||
-    value instanceof Number ||
-    value === Number ||
-    value instanceof Boolean ||
-    value === Boolean
-  );
-}
-
-export function isArray(value: any): boolean {
-  if (value === Array) {
-    return true;
-  } else if (typeof Array.isArray === 'function') {
-    return Array.isArray(value);
-  } else {
-    return value instanceof Array;
-  }
-}
-
 /**
  * Annotate properties which should be deserializable.
  * @param {any} [type] - class which should be used during creating object e.g.:
@@ -76,7 +50,7 @@ export function isArray(value: any): boolean {
  * @returns {PropertyDecorator}
  */
 export function ModelProp(
-  type?: any,
+  type?: () => any,
   sourceProperty?: string | symbol
 ): PropertyDecorator {
   return (target, property) => {
@@ -128,39 +102,47 @@ export abstract class Model {
         type = type();
       }
 
-      if (isPrimitive(data[key]) && isPrimitive(type)) {
-        // Value is primitive type, assign it to object.
-        obj[targetProp] = data[key];
-      } else if (isArray(data[key])) {
-        // If decorated property is type of array assign it to object. It means that values of array are primitive type.
-        if (isArray(type)) {
-          obj[targetProp] = data[key];
-        } else {
-          // If decorated property specified own type, deserialize it.
-          obj[targetProp] = [];
-          data[key].forEach((arrObj: any) => {
-            obj[targetProp].push(
-              type.deserialize ? type.deserialize(arrObj) : new type(data[key])
-            );
-          });
-        }
-      } else {
-        // If is object and have deserialize method.
-        if (type.deserialize && data[key]) {
-          obj[targetProp] = type.deserialize(data[key]);
-        } else {
-          if (data[key]) {
-            // If is instance of object just call new with provided data (e.g. Date).
-            obj[targetProp] = new type(data[key]);
-          } else {
-            obj[targetProp] = data[key];
-            obj[targetProp] = data[key];
-          }
-        }
-      }
+      obj[targetProp] = Model.deserializeProperty(data[key], type);
     });
 
     return <T>obj;
+  }
+
+  protected static deserializeProperty(value: any, type: any): any {
+    if (isPrimitive(value) && isPrimitive(type)) {
+      // Value is primitive type, just return it
+      return value;
+    }
+
+    if (isArray(value)) {
+      // If decorated property is type of array return it. It means that values of array are primitive type.
+      if (isArray(type)) {
+        return value;
+      }
+
+      // If decorated property specified own type, deserialize it.
+      const prop = [];
+
+      value.forEach((arrObj: any) => {
+        prop.push(
+          type.deserialize ? type.deserialize(arrObj) : new type(value)
+        );
+      });
+
+      return prop;
+    }
+
+    // If have deserialize method and value is defined.
+    if (type.deserialize && value) {
+      return type.deserialize(value);
+    }
+
+    if (value) {
+      // If is instance of object just call new with provided data (e.g. Date).
+      return new type(value);
+    } else {
+      return value;
+    }
   }
 
   /**
@@ -261,7 +243,6 @@ export abstract class Model {
       if (typeof property.serialize === 'function') {
         return property.serialize();
       } else if (isArray(property)) {
-        property.concat(['adf']);
         return property.map((element: any) =>
           this.basicSerializeProperty(element)
         );

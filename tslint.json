@@ -5,6 +5,12 @@
     "interface-name": [true, "never-prefix"],
     "no-angle-bracket-type-assertion": false,
     "no-console": false,
+    "variable-name": false,
+    "member-ordering": false,
+    "max-classes-per-file": false,
+    "no-string-literal": false,
+    "only-arrow-functions": false,
+    "ban-types": false,
     // TODO: allow devDependencies only in **/*.spec.ts files:
     // waiting on https://github.com/palantir/tslint/pull/3708
     "no-implicit-dependencies": [true, "dev"]
