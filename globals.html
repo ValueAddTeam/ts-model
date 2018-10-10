@@ -70,8 +70,13 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/address.html" class="tsd-kind-icon">Address</a></li>
+								<li class="tsd-kind-class"><a href="classes/link.html" class="tsd-kind-icon">Link</a></li>
 								<li class="tsd-kind-class"><a href="classes/model.html" class="tsd-kind-icon">Model</a></li>
-								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/testclass.html" class="tsd-kind-icon">Test<wbr>Class</a></li>
+								<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/resource.html" class="tsd-kind-icon">Resource</a></li>
+								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/testmodel.html" class="tsd-kind-icon">Test<wbr>Model</a></li>
+								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/testmodel2.html" class="tsd-kind-icon">Test<wbr>Model2</a></li>
+								<li class="tsd-kind-class"><a href="classes/user.html" class="tsd-kind-icon">User</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -94,8 +99,10 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#embeddeddef" class="tsd-kind-icon">Embedded<wbr>Def</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#modelprop" class="tsd-kind-icon">Model<wbr>Prop</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#isarray" class="tsd-kind-icon">is<wbr>Array</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#isfunction" class="tsd-kind-icon">is<wbr>Function</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#isprimitive" class="tsd-kind-icon">is<wbr>Primitive</a></li>
 							</ul>
 						</section>
@@ -110,7 +117,7 @@
 					<div class="tsd-signature tsd-kind-icon">Class<wbr>Fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="globals.html#classfieldskeys" class="tsd-signature-type">ClassFieldsKeys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/types.ts#L5">lib/types.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/types.ts#L5">lib/types.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -120,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">Class<wbr>Fields<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">{ [P in keyof T]: T[P] extends Function ? never : P; }[keyof T]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/types.ts#L2">lib/types.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/types.ts#L2">lib/types.ts:2</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -130,7 +137,7 @@
 					<div class="tsd-signature tsd-kind-icon">Class<wbr>Methods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="globals.html#classmethodskeys" class="tsd-signature-type">ClassMethodsKeys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/types.ts#L9">lib/types.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/types.ts#L9">lib/types.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -140,7 +147,7 @@
 					<div class="tsd-signature tsd-kind-icon">Class<wbr>Methods<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">{ [P in keyof T]: T[P] extends Function ? P : never; }[keyof T]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/types.ts#L6">lib/types.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/types.ts#L6">lib/types.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -150,7 +157,7 @@
 					<div class="tsd-signature tsd-kind-icon">Model<wbr>Subset<span class="tsd-signature-symbol">:</span> <a href="globals.html#omit" class="tsd-signature-type">Omit</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#classfieldskeys" class="tsd-signature-type">ClassFieldsKeys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/model.ts#L24">lib/model.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/model.ts#L25">lib/model.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -178,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">Omit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/types.ts#L10">lib/types.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/types.ts#L10">lib/types.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -188,10 +195,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="propertydecoratorkey" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> property<wbr>Decorator<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">property<wbr>Decorator<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"__VaTsModelProp__"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;__VaTsModelProp__&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Decorator<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"__VaTsResourceProp__"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;__VaTsResourceProp__&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/model.ts#L4">lib/model.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/model.ts#L5">lib/model.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/resource.ts#L6">lib/resource.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -199,16 +207,56 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="modelprop" class="tsd-anchor"></a>
-					<h3>Model<wbr>Prop</h3>
+					<a name="embeddeddef" class="tsd-anchor"></a>
+					<h3>Embedded<wbr>Def</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Model<wbr>Prop<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, sourceProperty<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PropertyDecorator</span></li>
+						<li class="tsd-signature tsd-kind-icon">Embedded<wbr>Def<span class="tsd-signature-symbol">(</span>_embedded<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ClassDecorator</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/model.ts#L78">lib/model.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/resource.ts#L8">lib/resource.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>_embedded: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">function</span></h5>
+											<ul class="tsd-parameters">
+												<li class="tsd-parameter-siganture">
+													<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+														<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+													</ul>
+													<ul class="tsd-descriptions">
+														<li class="tsd-description">
+															<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ClassDecorator</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="modelprop" class="tsd-anchor"></a>
+					<h3>Model<wbr>Prop</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Model<wbr>Prop<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, sourceProperty<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PropertyDecorator</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/model.ts#L52">lib/model.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -219,7 +267,19 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">any</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sourceProperty: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5>
@@ -239,13 +299,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/model.ts#L46">lib/model.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/utils.ts#L22">lib/utils.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isfunction" class="tsd-anchor"></a>
+					<h3>is<wbr>Function</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Function<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/utils.ts#L1">lib/utils.ts:1</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -262,7 +345,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/d5503a7/src/lib/model.ts#L29">lib/model.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/ValueAddTeam/ts-model/blob/6802184/src/lib/utils.ts#L5">lib/utils.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -288,10 +371,25 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
+						<a href="classes/address.html" class="tsd-kind-icon">Address</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/link.html" class="tsd-kind-icon">Link</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/model.html" class="tsd-kind-icon">Model</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/resource.html" class="tsd-kind-icon">Resource</a>
+					</li>
 					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="classes/testclass.html" class="tsd-kind-icon">Test<wbr>Class</a>
+						<a href="classes/testmodel.html" class="tsd-kind-icon">Test<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/testmodel2.html" class="tsd-kind-icon">Test<wbr>Model2</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/user.html" class="tsd-kind-icon">User</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#classfields" class="tsd-kind-icon">Class<wbr>Fields</a>
@@ -315,10 +413,16 @@
 						<a href="globals.html#propertydecoratorkey" class="tsd-kind-icon">property<wbr>Decorator<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#embeddeddef" class="tsd-kind-icon">Embedded<wbr>Def</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#modelprop" class="tsd-kind-icon">Model<wbr>Prop</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#isarray" class="tsd-kind-icon">is<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isfunction" class="tsd-kind-icon">is<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#isprimitive" class="tsd-kind-icon">is<wbr>Primitive</a>
