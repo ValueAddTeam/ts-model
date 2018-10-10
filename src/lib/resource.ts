@@ -40,7 +40,7 @@ export class Resource<
    * Embedded Resources MAY be a full, partial, or inconsistent version of
    * the representation served from the target URI.
    */
-  _embedded?: T;
+  _embedded: T = <any>{};
   /**
    * It is an object whose property names are link relation types (as
    * defined by [RFC5988](https://tools.ietf.org/html/rfc5988)) and values
@@ -49,7 +49,7 @@ export class Resource<
    * of which the containing "_links" object is a property.
    */
   @ModelProp()
-  _links?: { [L in Links]: Link | Link[] };
+  _links: { [L in Links]: Link | Link[] } = <any>{};
 
   static deserialize<T>(data: object): T {
     const obj = super.deserialize<T>(data);
