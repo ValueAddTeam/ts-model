@@ -22,7 +22,7 @@ const propertyDecoratorKey = '__VaTsModelProp__';
  *   type TestClassWithFullName = ModelSubset<TestClass, 'name' | 'surname'>;
  * </code>
  */
-export type ModelSubset<T extends Model, K extends keyof T> = Omit<
+export type ModelSubset<T, K extends keyof T> = Omit<
   T,
   Exclude<ClassFieldsKeys<T>, K>
 >;

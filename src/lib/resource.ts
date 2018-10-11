@@ -27,7 +27,7 @@ export function EmbeddedDef(_embedded: {
  * @Todo: enforce Resource type in T map
  */
 export class Resource<
-  T extends { [key: string]: any | any[] } = {
+  Embedded extends { [key: string]: any | any[] } = {
     [key: string]: Resource | Resource[];
   },
   Links extends string = any
@@ -40,7 +40,7 @@ export class Resource<
    * Embedded Resources MAY be a full, partial, or inconsistent version of
    * the representation served from the target URI.
    */
-  _embedded: T = <any>{};
+  _embedded: Embedded = <any>{};
   /**
    * It is an object whose property names are link relation types (as
    * defined by [RFC5988](https://tools.ietf.org/html/rfc5988)) and values
