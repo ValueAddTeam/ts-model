@@ -97,9 +97,14 @@ export abstract class Model {
 
       const targetProp = metadata.targetProp;
       let type = metadata.type;
+      let fn;
 
-      if (!type.name || type.name === 'anonymous') {
-        type = type();
+      try {
+        fn = type();
+      } catch (e) {}
+
+      if (fn && fn.name) {
+        type = fn;
       }
 
       obj[targetProp] = Model.deserializeProperty(data[key], type);
